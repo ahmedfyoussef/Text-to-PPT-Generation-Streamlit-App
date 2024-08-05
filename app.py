@@ -88,5 +88,6 @@ def get_ppt_download_link(topic):
     return f'<a href="data:application/vnd.openxmlformats-officedocument.presentationml.presentation;base64,{b64_ppt}" download="{ppt_filename}">Download the PowerPoint Presentation</a>'
 
 
-if __name__ == "__main__":
-    main()
+if __name__ == '__main__':
+  #  app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
