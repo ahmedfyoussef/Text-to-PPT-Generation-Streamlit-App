@@ -8,7 +8,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-openai.api_key = os.getenv('OPENAI_API_KEY')  # Replace with your actual API key
+openai.api_key = os.getenv('OPENAI_API_KEyY')  # Replace with your actual API key
 
 # Define custom formatting options
 TITLE_FONT_SIZE = Pt(30)
@@ -16,22 +16,24 @@ SLIDE_FONT_SIZE = Pt(16)
 
 
 def generate_slide_titles(topic):
-    prompt = f"Generate 5 slide titles for the topic '{topic}'."
-    response = openai.Completion.create(
-        engine="text-davinci-003",
-        prompt=prompt,
-        max_tokens=200,
-    )
-    return response['choices'][0]['text'].split("\n")
+    #prompt = f"Generate 5 slide titles for the topic '{topic}'."
+    #response = openai.Completion.create(
+        #engine="text-davinci-003",
+        #prompt=prompt,
+        #max_tokens=200,
+    #)
+    #return response['choices'][0]['text'].split("\n")
+    return "generate_slide_titles"
 
 def generate_slide_content(slide_title):
-    prompt = f"Generate content for the slide: '{slide_title}'."
-    response = openai.Completion.create(
-        engine="text-davinci-003",
-        prompt=prompt,
-        max_tokens=500,  # Adjust as needed based on the desired content length
-    )
-    return response['choices'][0]['text']
+    #prompt = f"Generate content for the slide: '{slide_title}'."
+    #response = openai.Completion.create(
+       # engine="text-davinci-003",
+       # prompt=prompt,
+       # max_tokens=500,  # Adjust as needed based on the desired content length
+   # )
+   # return response['choices'][0]['text']
+    return "generate_slide_content"
 
 
 def create_presentation(topic, slide_titles, slide_contents):
